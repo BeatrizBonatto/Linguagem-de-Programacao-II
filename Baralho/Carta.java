@@ -2,6 +2,11 @@ public class Carta {
     Nome nome;
     Naipe naipe;
 
+    public Carta(Nome nome, Naipe naipe){
+        this.naipe = naipe;
+        this.nome = nome;
+    }
+
     //get e set
     public Nome getNome() {
         return nome;
@@ -15,8 +20,10 @@ public class Carta {
     public void setNaipe(Naipe naipe) {
         this.naipe = naipe;
     }
-    
-    //for(int i = 0; i < 56; i++){
 
-    //}
+    @Override
+    public String toString() {
+        return "nome "+this.nome + "naipe " + this.naipe;
+    }
+    
 }

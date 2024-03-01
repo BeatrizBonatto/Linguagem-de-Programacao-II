@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args){
-        System.err.println();
+        Baralho baralho = new Baralho();
+        
+        System.out.println(baralho);
         
     }
 }

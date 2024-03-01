@@ -1,4 +1,4 @@
 public enum Naipe {
-    COPAS, PAUS, VALETE, OURO, CORINGA;
+    _Copas, _Paus, _Valete, _Ouro, _Coringa;
 }
 
