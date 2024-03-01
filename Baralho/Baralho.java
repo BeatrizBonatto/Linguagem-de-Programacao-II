@@ -43,7 +43,20 @@ public class Baralho {
     	  }
     }
     
-    /*distribuirCarta(){}*/
+    //metodo distribuirCarta
+    public void distribuirCarta(){
+        String cartaRetirada;  //armazenar carta retirada
+        
+        while(true) {
+            if (this.baralhoCartas[this.baralhoCartas.length] == null || this.baralhoCartas[this.baralhoCartas.length] == "") {
+                qntdCartas-=1;
+                return true;
+            } else {
+                cartaRetirada = this.baralhoCartas[qntdCartas];
+                return false;
+            }
+        }
+    }
     
     //metodo hasCarta - conferir se baralho tem carta
     public boolean hasCarta() {
@@ -58,7 +71,7 @@ public class Baralho {
     //metodo imprimir
     public void imprimirBaralho() {
         for (int i = 0; i < this.baralhoCartas.length; i++) {
-            System.out.println (i + "" + this.baralhoCartas[i]);  //-> teste
+            System.out.println (i + "" + this.baralhoCartas[i]);
         }
     }
     
