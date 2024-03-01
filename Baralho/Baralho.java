@@ -34,8 +34,8 @@ public class Baralho {
     public void embaralhar () {
         //usar Math.random para gerar indices aleatorios
     	for (int i = 0; i < 700000; i++)  {
-    		int indiceAleatorio1 = (int) (Math.random () * 56);
-    		int indiceAleatorio2 = (int) (Math.random () * 56);
+    		int indiceAleatorio1 = (int) (Math.random () * this.baralhoCartas.length); //deve acompanhar o tamanho do vetor
+    		int indiceAleatorio2 = (int) (Math.random () * this.baralhoCartas.length); //deve acompanhar o tamanho do vetor
     
     		Carta auxiliar = this.baralhoCartas[indiceAleatorio1];
     		this.baralhoCartas[indiceAleatorio1] = this.baralhoCartas[indiceAleatorio2];
