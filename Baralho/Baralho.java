@@ -44,7 +44,16 @@ public class Baralho {
     }
     
     /*distribuirCarta(){}*/
-    /*hasCarta()*/
+    
+    //metodo hasCarta - conferir se baralho tem carta
+    public boolean hasCarta() {
+        if(this.baralhoCartas == null) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
     
     //metodo imprimir
     public void imprimirBaralho() {
