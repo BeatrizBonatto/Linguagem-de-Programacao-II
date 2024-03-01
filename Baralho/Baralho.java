@@ -30,28 +30,19 @@ public class Baralho {
         }
     }
 
-    public void embaralhar(Carta[] cartas){
-        int qntdCartas = cartas.length;
-        Carta[] baralhoCartas = new Carta[qntdCartas];
-        Carta carta1;
-        Carta carta2;
-        Carta auxiliar;
-
-        //usar Math.random para gerar indices aleatórios
-       // int indexAleatorio1 = (int)(Math.random() * 10 ) + 1;
-
-        for(int i = 0; i < qntdCartas; i++) {
-            int indexAleatorio1 = (int)(Math.random() * 10 ) + 1;
-            carta1 = baralhoCartas[indexAleatorio1];  //12
-
-            int indexAleatorio2 = (int)(Math.random() * 10 ) + 1;
-            auxiliar = baralhoCartas[indexAleatorio2];  //35
-
-            ;
-
-        }
-
+    //metodo embaralhar
+    public void embaralhar () {
+        //usar Math.random para gerar indices aleatorios
+    	for (int i = 0; i < 700000; i++)  {
+    		int indiceAleatorio1 = (int) (Math.random () * 56);
+    		int indiceAleatorio2 = (int) (Math.random () * 56);
+    
+    		Carta auxiliar = this.baralhoCartas[indiceAleatorio1];
+    		this.baralhoCartas[indiceAleatorio1] = this.baralhoCartas[indiceAleatorio2];
+    		this.baralhoCartas[indiceAleatorio2] = auxiliar;
+    	  }
     }
+    
     /*distribuirCarta(){}*/
     /*hasCarta()*/
     /*imprimirBaralho()*/
