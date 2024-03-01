@@ -13,7 +13,7 @@ public class Baralho {
                     baralhoCartas[i] = carta;
                     i++;
 
-                    System.out.println(i + " - " + carta.toString());  //-> teste
+                    System.out.println(i + carta.toString());  //-> teste
                 }
                 else if (naipe == Naipe._Coringa && nome == Nome.Coringa){
                     for(int j = 0; j < 4; j++) {
@@ -21,20 +21,33 @@ public class Baralho {
             
                         baralhoCartas[i] = cartaCoringa;
                         i++;
-                        System.out.println(i + " - " + cartaCoringa.toString());  //-> teste
+                        System.out.println(i + cartaCoringa.toString());  //-> teste
                     }
                 }
             }
         }
     }
 
-    public void embaralhar(Baralho baralho){
-        //usar Math.random
+    public void embaralhar(Carta[] cartas){
+        int qntdCartas = cartas.length;
+        Carta[] baralhoCartas = new Carta[qntdCartas];
         Carta carta1;
         Carta carta2;
         Carta auxiliar;
 
-        //dpuble indexAleatoria =Math.random();
+        //usar Math.random para gerar indices aleatórios
+       // int indexAleatorio1 = (int)(Math.random() * 10 ) + 1;
+
+        for(int i = 0; i < qntdCartas; i++) {
+            int indexAleatorio1 = (int)(Math.random() * 10 ) + 1;
+            carta1 = baralhoCartas[indexAleatorio1];  //12
+
+            int indexAleatorio2 = (int)(Math.random() * 10 ) + 1;
+            auxiliar = baralhoCartas[indexAleatorio2];  //35
+
+            ;
+
+        }
 
     }
     /*distribuirCarta(){}*/

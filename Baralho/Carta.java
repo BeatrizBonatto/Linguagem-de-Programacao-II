@@ -23,7 +23,7 @@ public class Carta {
 
     @Override
     public String toString() {
-        return "nome "+this.nome + "naipe " + this.naipe;
+        return " - " +this.nome + this.naipe;
     }
     
 }
