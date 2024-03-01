@@ -45,5 +45,12 @@ public class Baralho {
     
     /*distribuirCarta(){}*/
     /*hasCarta()*/
-    /*imprimirBaralho()*/
+    
+    //metodo imprimir
+    public void imprimirBaralho() {
+        for (int i = 0; i < this.baralhoCartas.length; i++) {
+            System.out.println (i + "" + this.baralhoCartas[i]);  //-> teste
+        }
+    }
+    
 }
