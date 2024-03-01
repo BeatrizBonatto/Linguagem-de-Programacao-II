@@ -1,27 +1,29 @@
 public class Baralho {
-    //COnstrutor - criação do bararalho - array
+    //array - baralho
+    private Carta[] baralhoCartas = new Carta[56];
+    
+    //Construtor - criação do bararalho
     public Baralho(){
-        Carta[] baralhoCartas = new Carta[56]; 
+        this.baralhoCartas = baralhoCartas;
+        
         int i = 0;
-
         //  tipo variavel : conjunto de elementos
         for(Naipe naipe : Naipe.values()){
             for(Nome nome : Nome.values()){
                 if (naipe != Naipe._Coringa && nome != Nome.Coringa) {
                     Carta carta = new Carta(nome, naipe);
-
-                    baralhoCartas[i] = carta;
+    
+                    this.baralhoCartas[i] = carta;
                     i++;
-
-                    System.out.println(i + carta.toString());  //-> teste
+                    //System.out.println(i + carta.toString());  //   -> teste
                 }
                 else if (naipe == Naipe._Coringa && nome == Nome.Coringa){
                     for(int j = 0; j < 4; j++) {
                         Carta cartaCoringa = new Carta(Nome.Coringa, Naipe._Coringa);
             
-                        baralhoCartas[i] = cartaCoringa;
+                        this.baralhoCartas[i] = cartaCoringa;
                         i++;
-                        System.out.println(i + cartaCoringa.toString());  //-> teste
+                        //System.out.println(i + cartaCoringa.toString());  //   -> teste
                     }
                 }
             }
