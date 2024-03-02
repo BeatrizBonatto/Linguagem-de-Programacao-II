@@ -3,9 +3,7 @@ public class Baralho {
     private Carta[] baralhoCartas = new Carta[56];
     
     //Construtor - criação do bararalho
-    public Baralho(){
-        this.baralhoCartas = baralhoCartas;
-        
+    public Baralho(){        
         int i = 0;
         //  tipo variavel : conjunto de elementos
         for(Naipe naipe : Naipe.values()){
@@ -31,11 +29,11 @@ public class Baralho {
     }
 
     //metodo embaralhar
-    public void embaralhar () {
+    public void embaralhar() {
         //usar Math.random para gerar indices aleatorios
     	for (int i = 0; i < 700000; i++)  {
-    		int indiceAleatorio1 = (int) (Math.random () * this.baralhoCartas.length); //deve acompanhar o tamanho do vetor
-    		int indiceAleatorio2 = (int) (Math.random () * this.baralhoCartas.length); //deve acompanhar o tamanho do vetor
+    		int indiceAleatorio1 = (int) (Math.random () * this.baralhoCartas.length - 1); //acompanhar o tamanho do vetor e -1 para acompanhar indice
+    		int indiceAleatorio2 = (int) (Math.random () * this.baralhoCartas.length - 1); //acompanhar o tamanho do vetor e -1 para acompanhar indice
     
     		Carta auxiliar = this.baralhoCartas[indiceAleatorio1];
     		this.baralhoCartas[indiceAleatorio1] = this.baralhoCartas[indiceAleatorio2];
@@ -44,18 +42,22 @@ public class Baralho {
     }
     
     //metodo distribuirCarta
-    public void distribuirCarta(){
-        String cartaRetirada;  //armazenar carta retirada
-        
-        while(true) {
-            if (this.baralhoCartas[this.baralhoCartas.length] == null || this.baralhoCartas[this.baralhoCartas.length] == "") {
-                qntdCartas-=1;
-                return true;
-            } else {
-                cartaRetirada = this.baralhoCartas[qntdCartas];
-                return false;
-            }
+    public Carta distribuirCarta() { 
+        //baralho null
+        if (baralhoCartas == null) {
+            return null;  // sem baralho
+        }  
+ 
+        for(int i = this.baralhoCartas.length - 1; i > -1; i--) {
+            Carta cartaRetirada = this.baralhoCartas[i];
+            if (cartaRetirada == null) {
+                continue;
+            } 
+            this.baralhoCartas[i] = null;  // deixando o antigo lugar da carta como null, "menos uma carta"
+            //System.out.println(cartaRetirada);  -> teste
+            return cartaRetirada;
         }
+        return null;
     }
     
     //metodo hasCarta - conferir se baralho tem carta

@@ -1,8 +1,8 @@
 public class Carta {
-    Nome nome;
-    Naipe naipe;
+    private Nome nome;
+    private Naipe naipe;
 
-    public Carta(Nome nome, Naipe naipe){
+    public Carta(Nome nome, Naipe naipe){  //funcao que e executada quando a classe for instanciada
         this.naipe = naipe;
         this.nome = nome;
     }
@@ -23,7 +23,7 @@ public class Carta {
 
     @Override
     public String toString() {
-        return " - " +this.nome + this.naipe;
+        return "- " +this.nome + this.naipe;
     }
     
 }

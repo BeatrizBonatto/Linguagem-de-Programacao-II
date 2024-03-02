@@ -3,7 +3,7 @@ public class Main {
         Baralho baralho = new Baralho();
         baralho.embaralhar();
         baralho.hasCarta();
-        //baralho.distribuirCarta();
+        baralho.distribuirCarta();
         baralho.imprimirBaralho();
         
         //System.out.println(baralho.hasCarta());  - testando true false
