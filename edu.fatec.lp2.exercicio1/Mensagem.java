@@ -9,6 +9,8 @@ public class Mensagem {
         this.horaEnvio = horaEnvio;
     }
 
+    public abstract Mensagem sendMessage(String);
+
     //@Override
     //public String toString() {}
 

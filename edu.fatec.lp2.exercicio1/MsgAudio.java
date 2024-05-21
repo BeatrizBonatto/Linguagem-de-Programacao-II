@@ -1,6 +1,11 @@
 
-public class MsgAudio {
+public class MsgAudio extends Mensagem {
     private int duracao;
+
+    @Override
+    public Mensagem sedMensagem(String conteudo) {
+        
+    }
 
     public MsgAudio(int duracao) {
         this.duracao = duracao;
