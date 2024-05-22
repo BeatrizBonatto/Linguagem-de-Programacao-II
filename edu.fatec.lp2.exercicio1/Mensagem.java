@@ -1,4 +1,4 @@
-public class Mensagem {
+public abstract class Mensagem {
     private  Contatinho destinatario;
     private String horaEnvio;
     private String conteudo;
@@ -9,10 +9,10 @@ public class Mensagem {
         this.horaEnvio = horaEnvio;
     }
 
-    public abstract Mensagem sendMessage(String);
+    @Override
+    public String toString(String conteudo, Contatinho destinatario, String horaEnvio);
 
-    //@Override
-    //public String toString() {}
+    public abstract Mensagem sendMensege(String aString);
 
     public Contatinho getDestinatario() {
         return destinatario;

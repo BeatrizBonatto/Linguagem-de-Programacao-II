@@ -10,9 +10,15 @@ public class Whatsapp {
     }
     
     //metodo 
-    public void listarContato() {
+    public void listarContato(List<Contatinho> contatos) {
+        for (Contatinho contato : contatos) {
+            System.out.println("Contato: ", contato.getNome(), "\n");
+        }
     }
-    public void listarMensagens() {
+    public void listarMensagens(List<Mensagem> mensagens) {
+        for (int i = 0; i < array.length; i++) {
+            
+        }
     }
 
     public List<Contatinho> getContatos() {
