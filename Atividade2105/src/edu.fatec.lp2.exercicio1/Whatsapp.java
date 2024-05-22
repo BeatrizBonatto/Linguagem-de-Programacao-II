@@ -1,3 +1,5 @@
+package edu.fatec.lp2.exercicio1;
+
 import java.util.List;
 
 public class Whatsapp {
@@ -12,12 +14,12 @@ public class Whatsapp {
     //metodo 
     public void listarContato(List<Contatinho> contatos) {
         for (Contatinho contato : contatos) {
-            System.out.println("Contato: ", contato.getNome(), "\n");
+            System.out.println("Contato: "+ contato.getNome()+ "\n");
         }
     }
     public void listarMensagens(List<Mensagem> mensagens) {
-        for (int i = 0; i < array.length; i++) {
-            
+        for (Mensagem mensagen : mensagens) {
+            System.out.println("Mensagem: " + mensagen.getConteudo());
         }
     }
 

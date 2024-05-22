@@ -1,3 +1,5 @@
+package edu.fatec.lp2.exercicio1;
+
 public class MsgTexto extends Mensagem {
     private int numChar;
 
@@ -5,7 +7,6 @@ public class MsgTexto extends Mensagem {
         return this;
     }
 
-    public String toString(String conteudo, Contatinho destinatario, String horaEnvio);
 
     public MsgTexto(int numChar) {
         this.numChar = numChar;
