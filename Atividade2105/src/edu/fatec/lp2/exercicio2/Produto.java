@@ -17,7 +17,16 @@ public class Produto {
         this.supermercado = supermercado;
     }
 
-
+    @Override
+    public String toString() {
+        return "Produto :\n" +
+                "\nNome: " + nome +
+                "\nUnd: " + unidade +
+                "\nDescricao: " + descricao +
+                "\nPreco: R$" + preco +
+                "\nDesconto: " + descontoMaximo +
+                "\nSupermercado: " + supermercado;
+    }
 
     public String getNome() {
         return nome;

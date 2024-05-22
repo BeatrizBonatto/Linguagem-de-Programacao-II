@@ -7,7 +7,6 @@ public class MsgTexto extends Mensagem {
         return this;
     }
 
-
     public MsgTexto(int numChar) {
         this.numChar = numChar;
     }

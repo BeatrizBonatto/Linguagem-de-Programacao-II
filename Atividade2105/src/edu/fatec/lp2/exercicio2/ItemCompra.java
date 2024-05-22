@@ -1,6 +1,6 @@
 package edu.fatec.lp2.exercicio2;
 
-public class ItemCompra {
+public class ItemCompra implements Calculavel {
     private int quantidade;
     private Produto produto;
     private double desconto;
@@ -9,6 +9,10 @@ public class ItemCompra {
         this.quantidade = quantidade;
         this.produto = produto;
         this.desconto = desconto;
+    }
+
+    public double calcularPreco() {
+        return (quantidade * produto.getPreco()) * desconto;
     }
 
     public int getQuantidade() {
